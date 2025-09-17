@@ -1,0 +1,50 @@
+/* ====== Fuentes personalizadas ====== */
+@font-face {
+font-family: 'general';
+src: url('../assets/supercharge-font/SuperchargeItalic-ywOWd.otf') format('truetype');
+}
+@font-face {
+font-family: 'titulo';
+src: url('../assets/supercharge-font/SuperchargeStraightHalftone-YzY7q.otf') format('truetype');
+font-weight: 800;
+}
+
+/* Reset  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Trebuchet MS', Courier, monospace;
+    color: #333;
+    background-color: #fff;
+    overflow-x: hidden ;
+}
+
+/* HEADER */
+header{
+    color: blue;
+    letter-spacing: 2px;
+    font-style: italic;
+
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background-color: white;
+   
+   display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+   list-style: none;
+   font-size: 0.9rem;
+}
+
