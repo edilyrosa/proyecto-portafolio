@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <span>Tu nombre - Desarrollador Web</span>
+        <span class="name-header">Tu nombre - Desarrollador Web</span>
         <nav>
             <ul class="menu">
                 <li><a href="#home">Inicio</a></li>
@@ -19,29 +19,52 @@
     </header>
 
     <section class="section-video-relative">
+        
         <video autoplay muted loop id="myVideo">
-<source src="https://videos.pexels.com/video-files/8721932/8721932-uhd_2732_1440_25fps.mp4" type="video/mp4">
-Tu navegador no soporta la etiqueta de video.
-</video>
+            <source 
+                src="https://videos.pexels.com/video-files/8721932/8721932-uhd_2732_1440_25fps.mp4" 
+                type="video/mp4"
+            >
+            Tu navegador no soporta la etiqueta de video.
+        </video>
 
         <section class="hijo-absoluto">
             <h1>Portafolio Profesional</h1>
             <span class="span-video">Soluciones innovadoras en software</span>
-            <button class="btn-head">
-                Contactame
-            </button>
-
+            <button class="btn-head"> Contactame</button>
         </section>
 
     </section>
 
-    <section id="home">
+
+
+    <section id="home" class="section">
         <h2>BIENVENIDO A MI PORTAFOLIO PROFESIONAL</h2>
-        <div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veniam natus explicabo, quam fuga quia, aliquam quod, officia maxime cumque aperiam optio delectus rem eveniet labore quibusdam vel mollitia vitae!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veniam natus explicabo, quam fuga quia, aliquam quod, officia maxime cumque aperiam optio delectus rem eveniet labore quibusdam vel mollitia vitae!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veniam natus explicabo, quam fuga quia, aliquam quod, officia maxime cumque aperiam optio delectus rem eveniet labore quibusdam vel mollitia vitae!</p>
+        
+        <div class="container-info-dividida">
+            <div class="hermano-izquierdo">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae reprehenderit a veritatis minus, quis ipsa? Veritatis eos deserunt repudiandae temporibus, tempore voluptas placeat nemo ducimus officia mollitia repellendus possimus commodi!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae reprehenderit a veritatis minus, quis ipsa? Veritatis eos deserunt repudiandae temporibus, tempore voluptas placeat nemo ducimus officia mollitia repellendus possimus commodi!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae reprehenderit a veritatis minus, quis ipsa? Veritatis eos deserunt repudiandae temporibus, tempore voluptas placeat nemo ducimus officia mollitia repellendus possimus commodi!</p>
+            </div>
+
+             <div class="hermano-derecho">
+                <picture>
+                    <source 
+                    srcset="./assets/chica-img-ancha-two.jpeg"
+                    media="(max-width:1000px)"
+                    
+                    >
+                    <img 
+                        src="./assets/girlProgramming.jpg"
+                        width="400" height="600"
+                        alt="imagen de chica programando"
+                    >
+                </picture>
+
+             </div>
         </div>
+
     </section>
 
 
