@@ -33,6 +33,7 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 2rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
 .name-header{
@@ -120,7 +121,8 @@ fondo cover de padre contenedor y sobre el estara div con: info + btn
     color: rgb(3,3,85);
     text-align: justify;
     line-height: 2;
-    margin: 1rem auto;
+    /* TODO: QUITAMOS ESTE MAGEN */
+    /* margin: 1rem auto; */
 }
 
 
@@ -161,5 +163,125 @@ h1{
     font-family: titulo, sans-serif;
     font-size: 3rem;
     font-style: italic;
+}
+h2{
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 3rem ;
+}
+
+
+/* TODO: BASE: defalult  */
+html{
+    font-size:18px ;
+}
+
+p{
+    font-size:1.2rem;
+}
+
+/* TODO: ====== Media Queries: FONTS ====== */
+@media(min-width:0px) and (max-width:600px){
+    html{
+    font-size:12px;
+    }
+
+    p{
+        font-size:1rem;
+    }
 
 }
+
+@media(min-width:601px) and (max-width:1000px){
+    html{
+    font-size:14px;
+    }
+
+    p{
+        font-size:1.2rem;
+    }
+
+}
+
+
+/* TODO: ====== HTML + CSS: Proyectos, ID='mis-trabajos' ====== */
+
+.proyectos-container{
+    display: flex;
+    flex-wrap:wrap;  /* impoetante la responsividad y que no ocurra overflow */
+    justify-content: space-around;
+    gap:0.1rem
+}
+.project-card{
+    background-color: #fff;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    max-width: 350px;
+    min-width: 25%;
+    min-height: 45vh; 
+}
+
+.project-card:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-8px);
+}
+
+.project-image{
+    width: 100%;
+    object-fit:cover;
+    border-radius: .4rem;
+}
+
+.project-title{
+    margin: 0.5rem 0;
+    font-weight: 600;
+}
+
+.project-description{
+    color: #555;
+}
+
+.project-link{
+    color: #1004f1;
+    display: block;
+    margin-top: 0.5rem;
+    text-decoration: none;
+}
+
+.project-link:hover{
+    text-decoration: underline;
+}
+
+
+/* TODO: Responsive header - cards, CON @MEDIA */
+
+
+
+
+/* TODO: ====== HTML + CSS -> Formulario, d="contact" ====== */
+#contact-form{
+    background-color: aliceblue;
+    width: 80%;
+    padding: 5rem;
+    text-align: center;
+    margin: 3rem auto;
+}
+
+label{
+    display: block;
+    margin-bottom: .5rem;
+}
+
+input, textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+
+}
+
+
+/* TODO: ====== HTML + CSS ->  Footer ====== */
+

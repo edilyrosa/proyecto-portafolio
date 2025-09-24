@@ -1,0 +1,353 @@
+/* ====== Fuentes personalizadas ====== */
+@font-face {
+font-family: 'general';
+src: url('../assets/supercharge-font/SuperchargeItalic-ywOWd.otf') format('truetype');
+}
+@font-face {
+font-family: 'titulo';
+src: url('../assets/supercharge-font/SuperchargeStraightHalftone-YzY7q.otf') format('truetype');
+font-weight: 800;
+}
+
+/* Reset  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Trebuchet MS', Courier, monospace;
+    color: #333;
+    background-color: #fff;
+    overflow-x: hidden ;
+}
+
+/** HEADER */
+header{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    /* todo: pregunta a la IA */
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+}
+
+.name-header{
+    letter-spacing: 2px;
+    font-style: italic;
+    color: rgb(3,3,85);
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    list-style: none; /* es especifico de las lista */
+    font-size: 0.9rem;
+}
+
+nav ul li a{
+    color: rgb(3,3,85);
+    text-decoration: none;  /* es especifico de las a */
+    font-weight: 600;
+}
+
+@media(max-width:900px){
+    .menu{
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+}
+
+/* seccion del vieo: padre relativo, el video que sera el 
+fondo cover de padre contenedor y sobre el estara div con: info + btn
+ */
+
+.section-video-relative{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    color: #fff;
+}
+
+#myVideo{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hijo-absoluto{
+    position: absolute;
+    left: 1%;
+    bottom: 1%;
+}
+
+.hijo-absoluto > *{
+    display: block;
+    margin: 1rem;
+
+}
+
+.btn-head{
+    width: 50%;
+    padding: 1rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(3,3,85);
+    color: #fff;
+    transition: background-color 0.3s;
+}
+.btn-head:hover{
+    background-color:  rgba(3,3,85, 0.7);;
+}
+
+
+/** seccion HOME */
+.section{
+    min-height: 100vh;
+    background-color: #fff;
+    color: rgb(3,3,85);
+    text-align: justify;
+    line-height: 2;
+    /* TODO: QUITAMOS ESTE MAGEN */
+    /* margin: 1rem auto; */
+}
+
+
+/** seccion contenedor flexible: text + img ambas son <div  */
+
+.container-info-dividida{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.container-info-dividida > div{
+    max-width: 50%;
+    padding: 1rem;
+}
+
+.hermano-derecho{
+    text-align: center;
+}
+
+@media(max-width:1000px){
+
+    .container-info-dividida{
+    flex-direction: column;
+}
+    .container-info-dividida > div, .container-info-dividida img{
+    min-width: 100%;
+    height: auto;
+}
+
+}
+
+/** FUENTES */
+
+h1{
+    font-family: titulo, sans-serif;
+    font-size: 3rem;
+    font-style: italic;
+}
+
+/* todo: las secciones tendran h2 como titlulos, estilizarlos */
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 3rem;
+  color: rgb(3, 3, 85);
+}
+
+/* todo: ====== Base ====== */
+html {
+  font-size:18px;
+}
+
+p{
+  font-size: 1.2rem;
+}
+/* ====== Media Queries: FONTS ====== */
+/* ====== Mobile y tablet (0 a 600px) ====== */
+@media (min-width: 0px) and (max-width: 600px) {
+  html {
+    font-size: 12px;  /* 14px → 1rem = 14px */
+  }
+  p {
+    font-size: 1.2rem;
+    color:rgb(9, 215, 70)
+    }
+}
+
+/* ====== Mobile y tablet (601 a 1000) ====== */
+@media (min-width: 601px) and (max-width: 1000px) {
+  html {
+    font-size: 14px;  /* 14px → 1rem = 14px */
+  }
+  p {
+    font-size: 1.2rem;
+    color:rgb(230, 23, 34)
+    }
+}
+/* ====== Desktop (+ 1000):  ====== */
+/* ! el defalul de arriba */
+
+
+
+
+
+/* TODO: ====== Proyectos ====== */
+#proyectos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: .1rem;
+}
+.project-card {
+  background: #fff;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+  max-width: 350px;
+  min-width: 25%;
+  min-height: 45vh;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.project-card:hover {
+  box-shadow: 0 10px 20px rgb(0 0 0 / 0.15);
+  transform: translateY(-8px);
+}
+.project-image {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.4rem;
+}
+.project-title {
+  margin: 0.5rem 0;
+  font-weight: 600;
+}
+.project-description {
+  color: #555;
+}
+.project-link {
+  color: #3b82f6;
+  display: block;
+  margin-top: 0.5rem;
+  text-decoration: none;
+}
+.project-link:hover {
+  text-decoration: underline;
+}
+
+
+/* Responsive header - cards */
+@media (max-width: 900px) {
+
+  /* TODO................................... */
+  #proyectos-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-card {
+    max-width: 70%;
+  }
+}
+
+
+
+
+
+
+/* TODO................................... */
+/* ====== Formulario ====== */
+#contact-form {
+  background: #9eb7d588;
+  width: 80%;
+  padding: 50px;
+  text-align: center;
+  margin: 50px auto;
+}
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+input, textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+textarea {
+  height: 30vh;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+/* Estados de error */
+input.error {
+  background: #ffcccc;
+  border: 1px solid #ff0000;
+}
+.error-message {
+  color: #ff0000;
+  display: none;
+  margin: 10px;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+/* ====== Footer ====== */
+
+
+
+/* ====== Footer ====== */
+.footer {
+  background: #1e40af;
+  color: #e5e7eb;
+  padding: 2rem 0;
+  text-align: center;
+}
+.container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.social-icons {
+  display: flex;
+  gap: 1.5rem;
+}
+.social-icons a {
+  color: #e5e7eb;
+  transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+.social-icons a:hover { color: var(--hover-color, #3b82f6); }
+.social-icons a.facebook:hover { --hover-color: #3b5998; }
+.social-icons a.twitter:hover { --hover-color: #1da1f2; }
+.social-icons a.instagram:hover { --hover-color: #e1306c; }
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: currentColor;
+}
+.copyright {
+  color: #9ca3af;
+  user-select: none;
+}
