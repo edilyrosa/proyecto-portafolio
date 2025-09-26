@@ -171,7 +171,7 @@ h2{
 }
 
 
-/* TODO: BASE: defalult  */
+/* BASE: defalult  */
 html{
     font-size:18px ;
 }
@@ -180,7 +180,7 @@ p{
     font-size:1.2rem;
 }
 
-/* TODO: ====== Media Queries: FONTS ====== */
+/* ====== Media Queries: FONTS ====== */
 @media(min-width:0px) and (max-width:600px){
     html{
     font-size:12px;
@@ -204,7 +204,7 @@ p{
 }
 
 
-/* TODO: ====== HTML + CSS: Proyectos, ID='mis-trabajos' ====== */
+/* ====== HTML + CSS: Proyectos, ID='mis-trabajos' ====== */
 
 .proyectos-container{
     display: flex;
@@ -220,8 +220,14 @@ p{
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
     max-width: 350px;
     min-width: 25%;
-    min-height: 45vh; 
+    min-height: 40vh; 
 }
+
+.project-card > *{
+    line-height: 1.3;
+    font-size: .9rem;
+}
+
 
 .project-card:hover{
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
@@ -255,33 +261,89 @@ p{
 }
 
 
-/* TODO: Responsive header - cards, CON @MEDIA */
+/* ====== HTML + CSS -> Formulario, d="contact" ====== */
 
-
-
-
-/* TODO: ====== HTML + CSS -> Formulario, d="contact" ====== */
+section #contact{
+     min-height: 100vh;
+     padding-bottom: 20vh;
+     z-index: 5;
+}
 #contact-form{
     background-color: aliceblue;
     width: 80%;
     padding: 5rem;
     text-align: center;
     margin: 3rem auto;
+
+       
+}
+    label{
+        display: block;
+        margin-bottom: .5rem;
+    }
+    input, textarea{
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+    /* todo JUEVES: terminar css del formulario */
+  textarea{
+    height: 30vh;
+    font-family: 'Trebuchet MS', Courier, monospace;
 }
 
-label{
-    display: block;
-    margin-bottom: .5rem;
-}
+    input.error{
+        background-color: #ffcc;
+        border: 1px solid red;
+    }
 
-input, textarea{
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    .error-message{
+    color: red;
+    display: none;
+    margin: 10px;
+    font-family: 'Trebuchet MS', Courier, monospace;
 
-}
+    }
 
 
 /* TODO: ====== HTML + CSS ->  Footer ====== */
+
+footer{
+    background-color: #1e40af;
+    color: #ddd;
+    padding:  2rem 0;
+    text-align: center;
+}
+.container{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.social-icons{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-icons a{
+    color: #fff;
+    transition:  color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.social-icons a:hover{ color: #5c54ef;}
+.social-icons a.facebook:hover{ color: #a29eed;}
+.social-icons a.twitter:hover{ color: #46a3dd;}
+.social-icons a.instagram:hover{ color: #cc1990;}
+
+.icon{
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: currentColor;
+}
 
