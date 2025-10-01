@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Protafolio Profesional ⭐</title>
     <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
@@ -35,8 +35,6 @@
         </section>
 
     </section>
-
-
 
 
     <section id="home" class="section">
@@ -118,12 +116,14 @@
 
 <div style="min-height: 100vh; background-color: white;">
 
-
-
     <section class="section" id="contact">
             <h2>CONTACTAME!</h2>
-        
-            <form id="contact-form">
+               
+    <!-- TODO: AGREGAR el action y method aquí -->
+            <form id="contact-form" 
+                action="https://formspree.io/f/xanpokgv"
+                method="POST"
+            >
                 <label for="name">Nombre:</label>
                 <input type="text" id="name" name="name" required>
                 <span class="error-message" id="name-error"> Nombre invalido</span>
@@ -172,5 +172,32 @@
 
     </footer>
 </div>
+
+<script src="./formulario.js"></script> 
+
+<!-- <script>
+    // zona js
+
+    //variables, document, metodos para obtener los elementos HTML, como por el id, clase, el tipo
+    let nombre = 'Edily Mora 23'
+    let peso = 50.50
+    nombre = 'Rosa'
+    console.log(nombre, peso);
+    console.log('El document', document);
+    console.log('El body', document.body);
+
+    //funcion: bloque de codigo con una tarea espeficica, ebita la repeticion.
+    let form = document.getElementById('contact-form')
+    console.log(form);
+    form.addEventListener('submit', function(e){
+        e.preventDefault()
+        let name = document.getElementById("name").value
+        console.log(name);
+        this.style.backgroundColor = 'red'
+    })
+
+
+</script> -->
+
 </body>
 </html>
