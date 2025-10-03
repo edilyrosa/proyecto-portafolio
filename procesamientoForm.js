@@ -122,6 +122,7 @@ messageInput.addEventListener('input', function(){
         alert('Por favor corrige los errores antes de enviar')
     } else{
         alert('Formulario valido, enviado')
+        event.target.reset(); 
     }
 
 
